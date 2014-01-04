@@ -1,0 +1,15 @@
+http://vimcasts.org/ summary
+
+x       cut one character and write it to default register
+dd      cut one line and write it to default register
+yy      copy one line into default register
+p       put text from default register after cursor
+
+xp      toggle characters
+ddp     toggle lines
+yyp     duplicate line
+
+yiw     copy/yank current word
+:reg "0 show yank register content
+"0p     paste/put yank register content 
+"_diw   delete current word without saving in yank register
