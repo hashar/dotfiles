@@ -13,3 +13,7 @@ yiw     copy/yank current word
 :reg "0 show yank register content
 "0p     paste/put yank register content 
 "_diw   delete current word without saving in yank register
+
+:args *.txt
+:argdo %s/Vimcasts\.\zscom/org/ge
+:argdo update
