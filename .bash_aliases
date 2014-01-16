@@ -2,6 +2,8 @@
 alias gpl='git pull'
 alias gst='git status'
 alias gpu='git push'
+alias gdi='git diff'
+alias gap='git add -p'
 
 # Composer
 alias compi="php ../composer.phar install --dev --prefer-dist"
