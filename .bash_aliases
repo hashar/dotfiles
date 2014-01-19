@@ -6,6 +6,7 @@ alias gdi='git diff'
 alias gap='git add -p'
 alias gco='git commit'
 alias gch='git checkout'
+alias gds='git diff --stat master HEAD^'
 
 # Composer
 alias compi="php ../composer.phar install --dev --prefer-dist"
