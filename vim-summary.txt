@@ -17,3 +17,5 @@ yiw     copy/yank current word
 :args *.txt
 :argdo %s/Vimcasts\.\zscom/org/ge
 :argdo update
+
+dt"     delete until "
