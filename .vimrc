@@ -2,6 +2,7 @@
 "" Vundle Configuration
 "
 set nocompatible               " be iMproved
+set title                      " update window title
 filetype off                   " required!
 
 set rtp+=~/.vim/bundle/vundle/
@@ -22,6 +23,16 @@ syntax enable
 filetype plugin indent on
 
 set number    " Display line number
+set ruler     " position of cursor
+set wrap      " split long lines
+set scrolloff=3 " min of 3 lines around cursor
+set ignorecase " no case during search
+set smartcase  " except if there is an upper case
+set incsearch  " highlight search results during typing
+set hlsearch   " highlight search results
+set backspace=indent,eol,start " default behavior for backspace
+set hidden     " hide file when open other files
+
 set expandtab " Use spaces instead of tabs
 
 autocmd FileType * set tabstop=4
