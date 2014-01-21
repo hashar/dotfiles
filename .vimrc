@@ -50,17 +50,19 @@ let g:syntastic_error_symbol   = '✗'
 let g:syntastic_warning_symbol = '⚠'
 let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
 
+" ctags
+set tags=tags,vendor.tags,pear.tags,local.tags
+set cscopetag cst
+set csto=1
+cscope add cscope.out
+
 " color scheme
-"colorscheme solarized
-"set background=dark
+colorscheme solarized
+set background=dark
+
 "let g:solarized_termtrans = 1
 "let g:solarized_termcolors = 256
 "let g:solarized_visibility = "high"
 "let g:solarized_contrast = "high"
 "
 
-" ctags
-set tags=tags,vendor.tags,pear.tags,local.tags
-set cscopetag cst
-set csto=1
-cscope add cscope.out
