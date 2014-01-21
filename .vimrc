@@ -10,7 +10,8 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'scrooloose/syntastic'
-Bundle 'altercation/vim-colors-solarized'
+"Bundle 'altercation/vim-colors-solarized'
+Bundle 'evidens/vim-twig'
 
 filetype plugin indent on     " required!
 

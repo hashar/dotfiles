@@ -19,3 +19,6 @@ yiw     copy/yank current word
 :argdo update
 
 dt"     delete until "
+
+:vimgrep /attribute/ ./src/** search attribute in src folder and children
+:cw open search list
