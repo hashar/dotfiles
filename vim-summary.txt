@@ -22,3 +22,5 @@ dt"     delete until "
 
 :vimgrep /attribute/ ./src/** search attribute in src folder and children
 :cw open search list
+
+http://vim.wikia.com/wiki/Search_and_replace substitute
