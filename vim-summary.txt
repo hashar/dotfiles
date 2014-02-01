@@ -25,7 +25,7 @@ dt"     delete until "
 
 http://vim.wikia.com/wiki/Search_and_replace substitute
 
-
+" search and replace
 vim ./Resources/views/
 :args ./**/*.html.twig
 :argdo %s/pim_catalog_/pim_enrich_/ge
