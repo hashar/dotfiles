@@ -19,7 +19,7 @@ alias tests="phpunit -c app/"
 alias fixcs="php-cs-fixer fix src/ --dry-run"
 
 # PIM
-alias pimrights="sudo setfacl -R -m u:www-data:rwX -m u:nico:rwX app/cache app/logs app/entities app/import app/export app/emails web/bundles && sudo setfacl -dR -m u:www-data:rwX -m u:nico:rwX app/cache app/logs app/entities app/import app/export app/emails web/bundles app/archive"
+alias pimrights="sudo setfacl -R -m u:www-data:rwX -m u:nico:rwX app/cache app/logs app/entities app/import app/export app/emails web/bundles app/archive && sudo setfacl -dR -m u:www-data:rwX -m u:nico:rwX app/cache app/logs app/entities app/import app/export app/emails web/bundles app/archive"
 
 # Selenium
 alias selenium='java -jar /home/nico/git/selenium-server-standalone-2.38.0.jar'
