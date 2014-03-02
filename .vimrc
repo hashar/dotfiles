@@ -66,18 +66,3 @@ set background=dark
 "let g:solarized_visibility = "high"
 "let g:solarized_contrast = "high"
 "
-
-"let's try to use hjkl :)
-inoremap <up>    <nop>
-inoremap <down>  <nop>
-inoremap <left>  <nop>
-inoremap <right> <nop>
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
-imap <up> <nop>
-imap <down> <nop>
-imap <left> <nop>
-imap <right> <nop>
-
