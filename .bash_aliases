@@ -16,7 +16,8 @@ alias compu="php ../composer.phar update --dev --prefer-dist"
 # PHP
 alias unit="phpunit -c app/ --testsuite=PIM_Unit_Test"
 alias tests="phpunit -c app/"
-alias fixcs="php-cs-fixer fix src/ --dry-run"
+alias fixcsdry="php-cs-fixer fix src/ --dry-run"
+alias fixcs="php-cs-fixer fix src/"
 
 # PIM
 alias pimrights="sudo setfacl -R -m u:www-data:rwX -m u:nico:rwX app/cache app/logs app/entities app/import app/export app/emails web/bundles app/archive && sudo setfacl -dR -m u:www-data:rwX -m u:nico:rwX app/cache app/logs app/entities app/import app/export app/emails web/bundles app/archive"
