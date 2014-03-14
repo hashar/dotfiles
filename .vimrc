@@ -12,6 +12,11 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/syntastic'
 "Bundle 'altercation/vim-colors-solarized'
 Bundle 'evidens/vim-twig'
+Bundle 'sjbach/lusty'
+Bundle 'kien/ctrlp.vim'
+Bundle 'itchyny/lightline.vim'
+Bundle 'Herzult/phpspec-vim'
+
 
 filetype plugin indent on     " required!
 
@@ -19,6 +24,18 @@ filetype plugin indent on     " required!
 " General configuration
 "
 set encoding=utf-8
+
+if !has('gui_running')
+  set t_Co=256
+endif
+
+set laststatus=2
+
+set hidden                        " Handle multiple buffers better.
+
+set wildmenu                      " Enhanced command line completion.
+set wildmode=list:longest         " Complete files like a shell.
+set wildignore=.svn,CVS,.git,.hg,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif,*.pyc,*.pyo,*.log,**/cache/**,**/logs/**,**/zend/**,**/vendor/**/vendor/**,web/css,web/js,web/bundles,*/project/*,*/target/*,*.hi
 
 syntax enable
 filetype plugin indent on
@@ -36,9 +53,18 @@ set hidden     " hide file when open other files
 
 set expandtab " Use spaces instead of tabs
 
+set nobackup                      " Don't make a backup before overwriting a file.
+set nowritebackup                 " And again.
+set noswapfile
+
+
+let mapleader=","
+
 autocmd FileType * set tabstop=4
 autocmd FileType * set softtabstop=4
 autocmd FileType * set shiftwidth=4
+
+let g:ctrlp_cmd = 'CtrlPMRU'
 
 ":nnoremap g ddp " move line under
 ":nnoremap G ddkP " move line above
@@ -65,4 +91,11 @@ set background=dark
 "let g:solarized_termcolors = 256
 "let g:solarized_visibility = "high"
 "let g:solarized_contrast = "high"
-"
+
+autocmd BufWrite * :call <SID>MkdirsIfNotExists(expand('<afile>:h'))
+
+function! <SID>MkdirsIfNotExists(directory)
+    if(!isdirectory(a:directory))
+        call system('mkdir -p '.shellescape(a:directory))
+    endif
+endfunction
