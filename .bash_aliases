@@ -24,3 +24,6 @@ alias pimrights="sudo setfacl -R -m u:www-data:rwX -m u:nico:rwX app/uploads/pro
 
 # Selenium
 alias selenium='java -jar /home/nico/git/selenium-server-standalone-2.38.0.jar'
+
+# Mongo
+alias repairmongo='sudo rm /var/lib/mongodb/mongod.lock && sudo /etc/init.d/mongodb restart'
