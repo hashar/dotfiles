@@ -16,7 +16,7 @@ Bundle 'sjbach/lusty'
 Bundle 'kien/ctrlp.vim'
 Bundle 'itchyny/lightline.vim'
 Bundle 'Herzult/phpspec-vim'
-
+Bundle 'joonty/vdebug.git'
 
 filetype plugin indent on     " required!
 

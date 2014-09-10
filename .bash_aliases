@@ -20,10 +20,10 @@ alias fixcsdry="php-cs-fixer fix src/ --dry-run"
 alias fixcs="php-cs-fixer fix src/"
 
 # PIM
-alias pimrights="sudo setfacl -R -m u:www-data:rwX -m u:nico:rwX app/uploads/product app/cache app/logs app/import app/export app/emails web/bundles app/archive && sudo setfacl -dR -m u:www-data:rwX -m u:nico:rwX app/cache app/logs app/import app/export app/emails web/bundles app/archive app/uploads/product"
+alias pimrights="sudo setfacl -R -m u:www-data:rwX -m u:nico:rwX app/uploads/product app/cache app/logs app/emails web/bundles app/archive && sudo setfacl -dR -m u:www-data:rwX -m u:nico:rwX app/cache app/logs app/emails web/bundles app/archive app/uploads/product"
 
 # Selenium
-alias selenium='java -jar /home/nico/git/selenium-server-standalone-2.38.0.jar'
+alias selenium='java -jar /home/nico/git/selenium-server-standalone-2.42.2.jar'
 
 # Mongo
 alias repairmongo='sudo rm /var/lib/mongodb/mongod.lock && sudo /etc/init.d/mongodb restart'
