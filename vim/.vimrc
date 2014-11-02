@@ -9,14 +9,22 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
+" Syntax checker
 Bundle 'scrooloose/syntastic'
-"Bundle 'altercation/vim-colors-solarized'
+" Supports for twig
 Bundle 'evidens/vim-twig'
+" Explorer, juggler
 Bundle 'sjbach/lusty'
+" Finder
 Bundle 'kien/ctrlp.vim'
+" Status line
 Bundle 'itchyny/lightline.vim'
+" Phpspec
 Bundle 'Herzult/phpspec-vim'
+" Xdebug
 Bundle 'joonty/vdebug.git'
+" Git integration
+Plugin 'tpope/vim-fugitive'
 
 filetype plugin indent on     " required!
 
@@ -57,7 +65,6 @@ set nobackup                      " Don't make a backup before overwriting a fil
 set nowritebackup                 " And again.
 set noswapfile
 
-
 let mapleader=","
 
 autocmd FileType * set tabstop=4
@@ -65,9 +72,6 @@ autocmd FileType * set softtabstop=4
 autocmd FileType * set shiftwidth=4
 
 let g:ctrlp_cmd = 'CtrlPMRU'
-
-":nnoremap g ddp " move line under
-":nnoremap G ddkP " move line above
 
 "Syntastic
 let g:syntastic_mode_map={ 'mode': 'active',
@@ -88,6 +92,21 @@ cscope add cscope.out
 " color scheme
 colorscheme solarized
 set background=dark
+
+" status line
+let g:lightline = {
+    \ 'colorscheme': 'solarized',
+    \ 'active': {
+    \   'left': [ [ 'mode', 'paste' ],
+    \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
+    \ },
+    \ 'component': {
+    \     'readonly': '%{&readonly?"⭤":""}',
+    \     'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
+    \     'fugitive': '%{exists("*fugitive#head")?"⭠ " . fugitive#head():""}'
+    \ },
+    \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
+    \ }
 
 autocmd BufWrite * :call <SID>MkdirsIfNotExists(expand('<afile>:h'))
 
