@@ -89,11 +89,6 @@ cscope add cscope.out
 colorscheme solarized
 set background=dark
 
-"let g:solarized_termtrans = 1
-"let g:solarized_termcolors = 256
-"let g:solarized_visibility = "high"
-"let g:solarized_contrast = "high"
-
 autocmd BufWrite * :call <SID>MkdirsIfNotExists(expand('<afile>:h'))
 
 function! <SID>MkdirsIfNotExists(directory)
