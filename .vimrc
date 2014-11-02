@@ -71,11 +71,13 @@ let g:ctrlp_cmd = 'CtrlPMRU'
 
 "Syntastic
 let g:syntastic_mode_map={ 'mode': 'active',
-    \ 'active_filetypes': ['ruby', 'php'],
+    \ 'active_filetypes': ['php'],
     \ 'passive_filetypes': ['css', 'scss'] }
 let g:syntastic_error_symbol   = '✗'
 let g:syntastic_warning_symbol = '⚠'
-let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
+let g:syntastic_php_checkers=['php', 'phpmd', 'phpcs']
+let g:syntastic_php_phpcs_args="--report=csv --standard=PSR2"
+let g:syntastic_aggregate_errors = 1
 
 " ctags
 set tags=tags,vendor.tags,pear.tags,local.tags
