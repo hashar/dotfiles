@@ -25,9 +25,9 @@ Bundle 'Herzult/phpspec-vim'
 Bundle 'joonty/vdebug.git'
 " Git integration
 Plugin 'tpope/vim-fugitive'
-" Track the engine.
+" Track snippets engine.
 Plugin 'SirVer/ultisnips'
-" Snippets are separated from the engine. Add this if you want them:
+" Add snippets
 Plugin 'honza/vim-snippets'
 
 filetype plugin indent on     " required!
@@ -121,9 +121,10 @@ function! <SID>MkdirsIfNotExists(directory)
 endfunction
 
 " Snippets
-let g:UltiSnipsExpandTrigger="<s-tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 " Load also my own snippets
 let g:snips_author = "Nicolas Dupont <nicolas@akeneo.com>"
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "nidupsnippets"]
